@@ -1,0 +1,41 @@
+.banner {
+  position: relative;
+  background: linear-gradient(
+    var(--primary2) 0%,
+    var(--primary2) 400px,
+    var(--primary3) 400px,
+    var(--primary3) 100%
+  );
+}
+.banner h1 {
+  max-width: 800px;
+}
+.banner img {
+  margin-top: 50px;
+  width: 80vw;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+}
+@media screen and (min-width: 600px) {
+  .banner img {
+    width: 80vw;
+  }
+}
+
+.what-we-do {
+  background-color: var(--primary3);
+  padding: 3rem 0;
+}
+@media screen and (min-width: 600px) {
+  .what-we-do .inner-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .what-we-do h2 {
+    width: 33%;
+  }
+}
