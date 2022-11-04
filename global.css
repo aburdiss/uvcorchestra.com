@@ -55,7 +55,14 @@ header {
   position: relative;
   height: 120px;
   width: 140px;
-  padding: 10px 0;
+  padding: 10px;
+  margin-left: 60px;
+}
+.logo img {
+  height: 100px;
+  position: absolute;
+  left: -60px;
+  top: 12px;
 }
 .logo::before {
   position: absolute;
