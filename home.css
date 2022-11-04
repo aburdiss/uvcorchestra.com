@@ -1,10 +1,10 @@
 .banner {
   position: relative;
   background: linear-gradient(
-    var(--primary2) 0%,
-    var(--primary2) 400px,
+    var(--primary3) 0%,
     var(--primary3) 400px,
-    var(--primary3) 100%
+    var(--primary2) 400px,
+    var(--primary2) 100%
   );
 }
 .banner h1 {
@@ -24,18 +24,104 @@
   }
 }
 
-.what-we-do {
-  background-color: var(--primary3);
-  padding: 3rem 0;
-}
 @media screen and (min-width: 600px) {
-  .what-we-do .inner-content {
+  .split .inner-content {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
   }
-  .what-we-do h2 {
-    width: 33%;
+  .split h2 {
+    width: 275px;
+    flex-shrink: 0;
+    padding-right: 2rem;
   }
+}
+
+.what-we-do {
+  background-color: var(--primary2);
+  padding: 3rem 0;
+}
+
+.donate {
+  background-color: var(--primary1);
+  padding: 3rem 0;
+}
+
+.calendar {
+  background-color: var(--primary3);
+}
+
+.calendar .inner h2 {
+  padding: 3rem 2rem;
+}
+
+@media screen and (min-width: 600px) {
+  .calendar .inner {
+    display: flex;
+    padding-left: calc((100vw - 64rem) / 2);
+  }
+
+  .calendar .inner h2 {
+    width: 275px;
+    flex-shrink: 0;
+    padding-right: 2rem;
+  }
+}
+
+.upcoming-events-container {
+  width: 100%;
+}
+.upcoming-event {
+  padding: 2rem;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.upcoming-event::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, var(--primary3), transparent);
+}
+
+.upcoming-event:nth-of-type(2)::before {
+  background: linear-gradient(to right, var(--primary3), transparent);
+}
+
+@media screen and (min-width: 600px) {
+  .upcoming-event::before {
+    background: linear-gradient(to right, var(--primary3), transparent);
+  }
+  .upcoming-event .content-box {
+    max-width: 400px;
+  }
+}
+
+.upcoming-event .content-box {
+  border: 4px solid var(--primary1);
+  padding: 2rem;
+
+  position: relative;
+  background-color: rgba(255, 227, 209, 0.8);
+}
+
+.upcoming-event .content-box h3 {
+  padding-bottom: 0.8rem;
+}
+
+.upcoming-event .content-box .date {
+  display: block;
+  padding-bottom: 0.8rem;
+}
+
+.christian-academy {
+  background-image: url(/assets/images/christianAcademy1.jpg);
+}
+
+.sidney-theatre {
+  background-image: url(https://sidneytheatre.org/wp-content/uploads/2022/07/66524731_2314189328628066_6115761536599326720_n.jpeg);
 }

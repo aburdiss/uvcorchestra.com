@@ -18,7 +18,8 @@
 }
 
 body {
-  background-color: var(--primary2);
+  background-color: var(--primary3);
+  border-top: 4px solid var(--primary1);
 }
 
 h1,
@@ -29,6 +30,7 @@ h5,
 h6 {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
+  margin: 0;
 }
 
 a {
@@ -65,11 +67,11 @@ header {
   transition: border 0.2s;
 }
 .logo:hover::before {
-  border: 1px solid var(--text-color-hover);
+  border: 1px solid var(--primary1);
 }
 .logo span {
   position: absolute;
-  background-color: #ff8c45;
+  background-color: var(--primary3);
   color: var(--text-color);
   transition: color 0.2s;
   top: 02rem;
@@ -78,7 +80,7 @@ header {
   width: 6rem;
 }
 .logo:hover span {
-  color: var(--text-color-hover);
+  color: var(--primary1);
 }
 
 nav {
@@ -101,7 +103,10 @@ header nav a {
   }
   .contact {
     position: absolute;
-    background-color: var(--primary1);
+    background-color: var(--primary3);
+    border-left: 4px solid var(--primary1);
+    border-bottom: 4px solid var(--primary1);
+    padding-top: calc(1rem + 4px);
     top: 0;
     height: 120px;
     width: 9rem;
@@ -113,7 +118,8 @@ header nav a {
   }
   .contact:hover,
   .contact:focus {
-    background-color: var(--primary3);
+    background-color: var(--primary2);
+    color: var(--text-color);
   }
 }
 @media screen and (min-width: 64rem) {
@@ -123,11 +129,11 @@ header nav a {
 }
 
 main {
-  padding-top: 1rem;
+  padding-top: 2rem;
 }
 
 footer {
-  background-color: var(--primary1);
+  background-color: var(--primary2);
   padding: 2rem 0;
 }
 footer .inner-content {
@@ -142,7 +148,7 @@ footer .inner-content {
   }
 }
 footer .social-media {
-  border: 1px solid black;
+  border: 4px solid var(--text-color);
   padding: 1rem;
   display: flex;
   text-align: center;
@@ -257,7 +263,6 @@ main {
 
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
 }
 
 /* Grouping content
