@@ -3,7 +3,9 @@
   background: linear-gradient(
     var(--primary3) 0%,
     var(--primary3) 400px,
-    var(--primary2) 400px,
+    var(--primary1) 400px,
+    var(--primary1) 404px,
+    var(--primary2) 404px,
     var(--primary2) 100%
   );
 }
@@ -12,16 +14,11 @@
 }
 .banner img {
   margin-top: 50px;
-  width: 80vw;
+  padding-left: max(calc(((100vw - 64rem) / 2) + 2rem), 2rem);
+  width: 100%;
   height: 450px;
   object-fit: cover;
   display: block;
-  margin-left: auto;
-}
-@media screen and (min-width: 600px) {
-  .banner img {
-    width: 80vw;
-  }
 }
 
 @media screen and (min-width: 600px) {

@@ -133,6 +133,7 @@ main {
 }
 
 footer {
+  border-top: 4px solid var(--primary1);
   background-color: var(--primary2);
   padding: 2rem 0;
 }
