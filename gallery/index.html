@@ -46,9 +46,11 @@
   <body>
     <a href="#main_content" class="skip-link">Skip to main content</a>
     <header class="inner-content">
-      <a href="../" class="logo">
-        <img src="/assets/images/Logo.png" alt="" />
-        <span>Upper Valley Community Orchestra</span>
+      <a href="/" class="logo" title="Home">
+        <img
+          src="/assets/images/Logo.png"
+          alt="Upper Valley Community Orchestra"
+        />
       </a>
       <nav>
         <a href="../gallery">Gallery</a>
@@ -80,10 +82,19 @@
         <img src="/assets/images/timpani.jpg" alt="UVCO Timpani at Practice" />
       </div>
     </main>
+    <div id="imageModal" class="modal">
+      <img class="modal-content" id="img" />
+    </div>
     <footer>
       <div class="inner-content">
         <div>
           <p>© 2022 Upper Valley Community Orchestra</p>
+          <p>
+            Website built and designed by
+            <a class="link" href="https://alexanderburdiss.com"
+              >Alexander Burdiss</a
+            >
+          </p>
           <p><a href="../privacy-policy/">Privacy Policy</a></p>
         </div>
         <div class="social-media">
@@ -152,5 +163,6 @@
         </div>
       </div>
     </footer>
+    <script src="./Gallery.js"></script>
   </body>
 </html>

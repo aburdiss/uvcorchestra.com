@@ -46,9 +46,11 @@
   <body>
     <a href="#main_content" class="skip-link">Skip to main content</a>
     <header class="inner-content">
-      <a href="../" class="logo">
-        <img src="/assets/images/Logo.png" alt="" />
-        <span>Upper Valley Community Orchestra</span>
+      <a href="/" class="logo" title="Home">
+        <img
+          src="/assets/images/Logo.png"
+          alt="Upper Valley Community Orchestra"
+        />
       </a>
       <nav>
         <a href="../gallery">Gallery</a>
@@ -58,12 +60,39 @@
     </header>
     <main class="inner-content" id="main_content">
       <h1>Contact</h1>
-      <div>Coming Soon</div>
+      <form action="https://formspree.io/f/xbjbeagq" method="POST">
+        <div class="left">
+          <h2>Contact Upper Valley Community Orchestra</h2>
+          <label>
+            <span> Name </span>
+            <input type="text" name="Name" />
+          </label>
+          <label>
+            <span> Email </span>
+            <input type="email" name="email" />
+          </label>
+          <label>
+            <span> Message </span>
+            <textarea name="message" rows="4"></textarea>
+          </label>
+          <button class="button" type="submit">Send</button>
+        </div>
+        <div class="right">
+          Contact us for more information on how to get involved, upcoming
+          events, volunteer opportunities, and more.
+        </div>
+      </form>
     </main>
     <footer>
       <div class="inner-content">
         <div>
           <p>© 2022 Upper Valley Community Orchestra</p>
+          <p>
+            Website built and designed by
+            <a class="link" href="https://alexanderburdiss.com"
+              >Alexander Burdiss</a
+            >
+          </p>
           <p><a href="../privacy-policy/">Privacy Policy</a></p>
         </div>
         <div class="social-media">

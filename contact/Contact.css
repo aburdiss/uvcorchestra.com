@@ -1,3 +1,55 @@
 main {
   padding-bottom: 3rem;
 }
+
+form {
+  background-color: var(--primary2);
+  padding: 40px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.22);
+}
+
+form .right {
+  margin-top: 50px;
+}
+@media screen and (min-width: 800px) {
+  form {
+    flex-direction: row;
+  }
+  form .left {
+    width: 50%;
+    padding-right: 40px;
+  }
+  form .right {
+    padding-left: 40px;
+    margin-top: 0;
+    width: 50%;
+    border-left: 2px solid var(--primary1);
+    display: flex;
+    align-items: center;
+  }
+}
+form h2 {
+  margin-bottom: 1rem;
+}
+form label {
+  display: block;
+  margin-bottom: 10px;
+}
+form label span {
+  display: block;
+}
+form input,
+form textarea {
+  width: 100%;
+}
+form textarea {
+  resize: vertical;
+}
+form .button:hover,
+form .button:focus {
+  background-color: var(--primary3);
+}

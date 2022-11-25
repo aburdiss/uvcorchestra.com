@@ -1,3 +1,48 @@
 main {
   padding-bottom: 3rem;
 }
+
+section a {
+  color: var(--primary1);
+}
+
+p {
+  margin-top: 2rem 0;
+  line-height: 1.5;
+}
+
+section {
+  padding: 2rem 0;
+}
+
+.conductor {
+  background-color: var(--primary2);
+}
+
+.join-container {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 650px) {
+  .join-container {
+    flex-direction: row;
+  }
+}
+.join-container .left {
+  flex: 1;
+}
+@media screen and (min-width: 650px) {
+  .join-container .left {
+    padding-right: 2rem;
+  }
+}
+.join-container .right {
+  flex: 1;
+}
+
+.join-container img {
+  height: 400px;
+  width: 400px;
+  max-width: 100%;
+  object-fit: cover;
+}
