@@ -70,6 +70,11 @@ header {
 .logo img {
   height: 140px;
 }
+@media screen and (min-width: 650px) {
+  .logo img {
+    margin-left: -30px;
+  }
+}
 
 nav {
   padding: 1rem 0;
