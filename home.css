@@ -41,6 +41,7 @@
 
 .donate {
   background-color: var(--primary1);
+  color: var(--text-color-light);
   padding: 3rem 0;
 }
 

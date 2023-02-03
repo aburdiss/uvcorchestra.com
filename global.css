@@ -6,12 +6,13 @@
 :root {
   --text-color: #000000;
   --text-color-hover: #444444;
-  --primary1: #e0292c;
-  --primary2: #dce3e5;
-  --primary3: #f5cac3;
-  --secondary1: #13ecc8;
+  --text-color-light: #ffffff;
+  --primary1: #d61f22;
+  --primary2: #b3d0c8;
+  --primary3: #fffecb;
+  /* --secondary1: #13ecc8;
   --secondary2: #6cfffb;
-  --secondary3: #d1fffd;
+  --secondary3: #d1fffd; */
   --break-s: 800px;
   --break-l: 1024px;
   --transition: 0.2s;
@@ -92,8 +93,9 @@ header nav a {
   }
   .contact {
     background-color: var(--primary1);
+    color: var(--text-color-light);
     text-decoration: none;
-    transition: background-color var(--transition);
+    transition: color var(--transition), background-color var(--transition);
   }
   .contact:hover,
   .contact:focus {
