@@ -21,7 +21,6 @@ fetch(URL)
   .then((res) => res.json())
   .then(({ result }) => {
     const page = result[0];
-    console.log(page);
 
     const headline = page.headline;
     headlineContainer.innerText = headline;
