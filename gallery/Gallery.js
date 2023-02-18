@@ -1,21 +1,17 @@
-const images = document.querySelectorAll('.image-container img');
+let PROJECT_ID = '9qmqbv2y';
+let DATASET = 'production';
+let QUERY = encodeURIComponent(`*[_type == "galleryImage"]{
+  "alt": image.alt,
+  "src": image.asset->url
+}`);
 
-const imageModal = document.querySelector('#imageModal');
+let URL = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${QUERY}`;
+
+const imageContainer = document.querySelector('#image-container');
 const imageModalImg = document.querySelector('#img');
+const imageModal = document.querySelector('#imageModal');
 
-images.forEach((image) => {
-  image.classList.add('clickable');
-  image.tabIndex = 0;
-
-  image.onclick = function () {
-    imageModal.classList.add('active');
-
-    imageModalImg.src = this.src;
-    imageModalImg.alt = this.alt;
-  };
-});
-
-imageModal.onclick = function () {
+function animateOut() {
   imageModal.classList.add('modal-out');
   imageModalImg.classList.add('out');
   setTimeout(function () {
@@ -23,4 +19,34 @@ imageModal.onclick = function () {
     imageModal.classList.remove('modal-out');
     imageModalImg.classList.remove('out');
   }, 400);
-};
+}
+
+// Handle the image modal
+imageModal.onclick = animateOut;
+
+// fetch the content
+fetch(URL)
+  .then((res) => res.json())
+  .then(({ result }) => {
+    imageContainer.innerHTML = '';
+    result.forEach((resultImage) => {
+      const button = document.createElement('button');
+      const image = document.createElement('img');
+      image.src = resultImage.src;
+      image.alt = resultImage.alt;
+      function onInteract() {
+        if (imageModal.classList.contains('active')) {
+          animateOut();
+        } else {
+          imageModal.classList.add('active');
+          imageModalImg.src = image.src;
+          imageModalImg.alt = image.alt;
+        }
+      }
+      button.classList.add('image-button');
+      button.onclick = onInteract;
+      button.appendChild(image);
+      imageContainer.appendChild(button);
+    });
+  })
+  .catch((err) => console.error(err));

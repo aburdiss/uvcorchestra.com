@@ -61,57 +61,64 @@
     <main id="main_content">
       <section class="inner-content">
         <h1>About</h1>
-        <p>
-          UVCO, Upper Valley Community Orchestra, was formed in 2016 by Mr. John
-          Streb. We are a not-for-profit organization and rely on donations from
-          the public. As of 2016 we have 60 members with at least 25 alternates.
-          We includes local High School members as well as established musicians
-          in the group who in turn mentor the younger members to keep their love
-          of music alive.
-        </p>
-        <p>
-          UVCO has performed two to three concerts a year since it was
-          established, except for all of 2020 and the spring of 2021 which was
-          during the COVID pandemic. We do July and December concerts when
-          enough members are available to participate and plan on increasing the
-          number of concerts as we become established in the community.
-        </p>
-        <p>
-          Check out our
-          <a href="/gallery">gallery</a> to view pictures, and keep watching the
-          <a href="/">homepage</a> to find out when our next performances will
-          be.
-        </p>
+        <div id="about-text-container">
+          <p>
+            UVCO, Upper Valley Community Orchestra, was formed in 2016 by Mr.
+            John Streb. We are a not-for-profit organization and rely on
+            donations from the public. As of 2016 we have 60 members with at
+            least 25 alternates. We includes local High School members as well
+            as established musicians in the group who in turn mentor the younger
+            members to keep their love of music alive.
+          </p>
+          <p>
+            UVCO has performed two to three concerts a year since it was
+            established, except for all of 2020 and the spring of 2021 which was
+            during the COVID pandemic. We do July and December concerts when
+            enough members are available to participate and plan on increasing
+            the number of concerts as we become established in the community.
+          </p>
+          <p>
+            Check out our
+            <a href="/gallery">gallery</a> to view pictures, and keep watching
+            the <a href="/">homepage</a> to find out when our next performances
+            will be.
+          </p>
+        </div>
       </section>
       <section class="conductor">
         <div class="inner-content">
-          <h2>Our Conductor</h2>
-          <p>
-            Mr. Streb, John, has been doing musical pit orchestras for area High
-            Schools and organizations for over 35 years and decided that Shelby
-            County and the surrounding community needed an Orchestra. We have
-            the Sidney Civic Band to entertain the community with wonderful
-            music of the big band era and of marching bands through the years
-            but we have not had an orchestra to entertain the community with
-            classical music or the sounds of wonderful musicals and movies. It
-            has been his dream to start such an organization.
-          </p>
-          <p>John lives in Fletcher, Ohio with his wife Kathy.</p>
+          <h2 id="conductor-headline">Our Conductor</h2>
+          <div id="conductor-text">
+            <p>
+              Mr. Streb, John, has been doing musical pit orchestras for area
+              High Schools and organizations for over 35 years and decided that
+              Shelby County and the surrounding community needed an Orchestra.
+              We have the Sidney Civic Band to entertain the community with
+              wonderful music of the big band era and of marching bands through
+              the years but we have not had an orchestra to entertain the
+              community with classical music or the sounds of wonderful musicals
+              and movies. It has been his dream to start such an organization.
+            </p>
+            <p>John lives in Fletcher, Ohio with his wife Kathy.</p>
+          </div>
         </div>
       </section>
       <section class="inner-content">
         <div class="join-container">
           <div class="left">
-            <h2>Join The Orchestra</h2>
-            <p>
-              The Upper Valley Community Orchestra is a volunteer orchestra, and
-              is always seeking new players who love to play. Contact
-              <a href="mailto:info@uvcorchestra.com">info@uvcorchestra.com</a>
-              for more information.
-            </p>
+            <h2 id="join-headline">Join The Orchestra</h2>
+            <div id="join-text">
+              <p>
+                The Upper Valley Community Orchestra is a volunteer orchestra,
+                and is always seeking new players who love to play. Contact
+                <a href="mailto:info@uvcorchestra.com">info@uvcorchestra.com</a>
+                for more information.
+              </p>
+            </div>
           </div>
           <div class="right">
             <img
+              id="join-image"
               src="/assets/images/rehearsal1.jpg"
               alt="The upper valley community orchestra in a rehearsal"
             />
@@ -197,5 +204,7 @@
         </div>
       </div>
     </footer>
+    <script src="../assets/js/sanityBlockContent.js"></script>
+    <script src="./About.js"></script>
   </body>
 </html>
