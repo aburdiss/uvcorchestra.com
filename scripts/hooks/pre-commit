@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# uvcorchestra.com
+# pre-commit git hook
+#
+# Created by Alexander Burdiss 8/2/23
+# Version 1.0.0
+#
+
+./scripts/generateSitemap.sh
+
+git add ./sitemap.xml
