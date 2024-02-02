@@ -34,6 +34,7 @@ const firstSectionHeadlineContainer = document.querySelector(
 const firstSectionTextContainer = document.querySelector('#first-section-text');
 
 const donateHeadlineContainer = document.querySelector('#donate-headline');
+const donateTextContainer = document.querySelector('#second-section-text');
 
 const eventsHeadlineContainer = document.querySelector('#events-headline');
 const eventsContainer = document.querySelector('#events-container');
@@ -74,6 +75,8 @@ fetch(URL)
 
     const donateHeadline = page.donateHeadline;
     donateHeadlineContainer.innerText = donateHeadline;
+
+    sanityBlockContent(donateTextContainer, page.secondSectionText);
 
     const eventsHeadline = page.eventsHeadline;
     eventsHeadlineContainer.innerText = eventsHeadline;
