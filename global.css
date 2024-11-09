@@ -3,6 +3,10 @@
   font-family: Tahoma, Arial, sans-serif;
 }
 
+@view-transition {
+  navigation: auto;
+}
+
 :root {
   --text-color: #000000;
   --text-color-hover: #444444;
