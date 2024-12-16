@@ -36,8 +36,8 @@ main {
 /*
   Set the color of the icon
 */
-svg path,
-svg rect {
+.loader svg path,
+.loader svg rect {
   fill: var(--primary1);
 }
 
