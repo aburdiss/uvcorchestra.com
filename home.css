@@ -119,6 +119,9 @@
 .empty {
   max-width: 685px;
   padding: 3rem 2rem;
+  p:first-of-type {
+    margin-top: 0rem;
+  }
 }
 
 .donate-button {

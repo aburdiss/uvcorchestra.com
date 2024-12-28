@@ -81,8 +81,14 @@ fetch(URL)
     const eventsHeadline = page.eventsHeadline;
     eventsHeadlineContainer.innerText = eventsHeadline;
 
+    const upcomingEvents = events.filter(function (event) {
+      const tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      return new Date(event.date).getTime() > tomorrow.getTime();
+    });
+
     // Handle Events
-    if (events.length) {
+    if (upcomingEvents.length) {
       noEventsTextContainer.remove();
 
       events.forEach((event) => {
